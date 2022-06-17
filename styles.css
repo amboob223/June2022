@@ -1,0 +1,16 @@
+html,body{
+    background-color: purple;
+    margin: 20px;
+    width:90%;
+};
+#item {
+    width: 400px;
+    height: 40px;
+    vertical-align: super;
+    font-size: 30px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+    border-image: initial;
+}
+
