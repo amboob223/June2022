@@ -1,16 +1,33 @@
-html,body{
-    background-color: purple;
-    margin: 20px;
-    width:90%;
-};
-#item {
-    width: 400px;
-    height: 40px;
-    vertical-align: super;
-    font-size: 30px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: black;
-    border-image: initial;
+.push{
+    align-items: center;
+    position: absolute;
+    margin-left: 25%;
 }
 
+#response{
+    background-color: aliceblue;
+}
+
+.sug{
+    padding: 0%;
+    margin-top: 10%;
+     background-color: rgb(111, 165, 165);
+
+}
+button{
+    border-radius: 30%;
+    background-color: aliceblue;
+}
+
+html,body{
+    background-color: lightblue;
+    
+};
+
+
+
+h1{
+    margin: 0px;
+    padding: 60%;
+    background-color:rgb(255, 253, 240)
+};

@@ -1,29 +1,53 @@
-const form = document.getElementById('form');
-const addBtn = document.getElementById('addto');
-const list = document.getElementById('listcontainer');
+const hash = {"Weed": "find a way to keep money to smoke",
+         "Women": "Start Dressing nice and smell well and KEEP money",
+          "Traveling": "get a part time job for an airline with benefits",
+        "Partying": "learn how to be a Dj or a stripper",
+        "Food":"learn how to cook,get stamps,get job to buy food",
+        "TV":"Handle your business so you can builtguilt free watching",
+        "Alone_time": "just disappear"
+        }
 
-addBtn.addEventListener('click',function(){
-    //I want this listener to add a p element when clicked and ins
-    // inside the p we put the value form the forms input tag
-    var paragraph = document.createElement('p');
-        paragraph.classList.add("smash");// this class list is an element method the elemenet we created above
-        
-        paragraph.innerText = form.value // when it say not  afunction that menaset it instead
-        list.appendChild(paragraph);
-        //now we use inner text to put in the info 
-        
-        form.value = " "//now we resetting the info in the form after we use it each time.
-    
-        // we want to draw a line through the p tage element when clicked 
-    paragraph.addEventListener('click',function(){
-        paragraph.style.textDecoration = "line-through";
-
-    })
-    // when double clicked we want to remove the child p form the elmeent.
-
-    paragraph.addEventListener('dblclick',function(){
-        list.removeChild(paragraph)
-    })
+const response = document.getElementById("response")
+const something = document.createElement("p");
+const val =document.createElement('h4')
+      val.classList.add("sug")
+response.appendChild(something)
+//gives us the random key
+   function switcher(){       //.keys and . val are objects methods
+        const kays = Object.keys(hash).length
+       const keys = Object.keys(hash); // this ian array of keys
+       // the length is 4 
+        const num = Math.floor(Math.random() * (0 +kays) );// the plus one makes it exclusive //to make a radom you make the range after floor and random and then plus one 
+        const randomnum = keys[num]//randkey
+        something.innerText = `${randomnum}`;
+       }
 
 
-})
+         // set interval ws the method we needed
+         const timerId = setInterval(switcher,1000)
+         // after a click event  clearInterval(timerId)
+
+      response.appendChild(something)
+
+      //events
+         something.addEventListener('click',function(){
+             clearInterval(timerId)
+             //iterating throughgt the hash
+            for(const prop in hash){// prop is a key
+               if(something.innerHTML === prop){
+                   response.appendChild(val)//the val is a element
+                   val.innerText = `${hash[prop]}`
+                }
+               } 
+              }
+              );
+
+        something.addEventListener('dblclick',function(){
+            something.remove();
+        })
+
+
+         
+
+         
+
